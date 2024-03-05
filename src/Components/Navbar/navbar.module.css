@@ -1,0 +1,72 @@
+.navCont {
+  display: flex;
+  background-color: #fe745c;
+  padding: 0.8vw 5vw;
+  justify-content: space-between;
+}
+.logoAndSearch {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  /* background-color: yellow; */
+}
+.logo{
+  width: 3vw;
+}
+.logoText{
+  font-size: 1.5vw;
+  color: white;
+  margin: 0 1vw;
+}
+.searchBar {
+  width: 35vw;
+  display: flex;
+  align-items: center;
+  margin: 0 2vw;
+  padding: 0 1vw;
+  border: 0.1vw solid black;
+  border-radius: 0.2vw;
+  background-color: white;
+}
+.searchIcon {
+  width: 1.5vw;
+  cursor: pointer;
+}
+.searchInput {
+  display: flex;
+  width: 100%;
+  outline: none;
+  padding: 0.5vw 1vw;
+  border: none;
+  font-size: 1.3vw;
+  background-color: transparent;
+}
+.userBagAbout {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login{
+  font-size: 1.5vw;
+  color: #fe745c;
+  background-color: white;
+  padding: 0.2vw 0.5vw;
+  border-radius: 0.2vw;
+  cursor: pointer;
+}
+.bagSec {
+  display: flex;
+  font-size: 1.5vw;
+  color: white;
+  align-items: center;
+  cursor: pointer;
+}
+.bagIcon{
+  width: 2.5vw;
+}
+.about {
+  font-size: 1.5vw;
+  color: white;
+  cursor: pointer;
+}
