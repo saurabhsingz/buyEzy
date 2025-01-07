@@ -1,0 +1,42 @@
+name: admin-panel frontend 
+run-name: Frontend deployment update triggered by ${{github.actor}}
+
+on:
+  push:
+    branches:
+      - "deployment"
+    paths:
+      - "./"
+      - ".github/workflows/frontend.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run: 
+        working-directory: "./"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Steup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with: 
+          path: frontend/node_modules
+          key: ${{ runner.os}}-node-${{ hashFiles('**/package.json')}}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit !== 'true'
+        run: yarn install
+
+      - name: Buid the application
+        run: npm run build
+
+      
+
